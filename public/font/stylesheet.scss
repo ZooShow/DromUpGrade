@@ -1,0 +1,16 @@
+// Необходимо выбрать шрифт и скачать с GoogleFonts zip со всеми типами этого шрифта и добавить в папку fonts
+// После в этом файле инициализируем все типы. Например:
+
+/*
+@font-face {
+    font-family: 'Commissioner';
+    src: url('Commissioner-ExtraBold.eot');
+    src: local('Commissioner ExtraBold'), local('Commissioner-ExtraBold'),
+        url('Commissioner-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Commissioner-ExtraBold.woff2') format('woff2'),
+        url('Commissioner-ExtraBold.woff') format('woff'),
+        url('Commissioner-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+ */

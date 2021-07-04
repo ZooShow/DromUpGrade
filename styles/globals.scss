@@ -1,0 +1,111 @@
+@import "reset";
+@import "mixins";
+@import "../public/font/stylesheet.scss";
+
+// Глобальные стили применяемые для всего приложения
+
+:root {
+  --main-color: #123456;  // Сюда добавляем цвета, которые будем юзать (ну или глобальные переменные)
+
+  --content-width: #{$xlContent};
+
+  --somePoints: '......................................................................................................................................................................................................................................................................................................................................................................................................................................';
+  @include lg {
+    --content-width: #{$lgContent};
+    --swiper-navigation-size: 26px !important;
+  }
+  @include md {
+    --content-width: #{$mdContent};
+  }
+  @include sm {
+    --content-width: #{$smContent};
+  }
+
+  --navigation-opacity: 1;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  color: var(main-color);
+  //font-family: superFont; //TODO: выбрать шрифт и вставить сюда
+  font-weight: normal;
+  font-style: normal;
+
+  *::selection {
+    background-color: #ff5c3e;
+    color: var(--white-color);
+    //filter: none;
+  }
+}
+
+.content {
+  @include content;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.test {
+  &, * {
+    fill: #ed4929 !important;
+  }
+}
+
+svg path {
+  //fill: inherit;
+}
+
+
+#__next {
+  .rc-slider {
+
+  }
+
+  .rc-slider-rail {
+    background-color: var(--light-blue-gray-color);
+    height: 3px;
+  }
+
+  .rc-slider-handle {
+    border: none;
+    background-color: var(--main-color);
+
+    box-shadow: none;
+    width: 11px;
+    height: 11px;
+    margin-top: -4px;
+
+  }
+
+  .rc-slider-track {
+    background-color: var(--main-color);
+    height: 3px;
+  }
+
+
+  .swiper-container {
+
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+
+    transition: opacity .15s;
+
+    &:after {
+      content: none;
+    }
+
+    width: auto;
+    height: auto;
+    display: block;
+
+  }
+
+  .swiper-button-disabled {
+    opacity: 0.7;
+  }
+}
