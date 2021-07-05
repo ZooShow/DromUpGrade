@@ -5,7 +5,7 @@
 Чтоб собрать проект:
 
 ```bash
-cd client
+npm install
 npm run dev
 ```
 
